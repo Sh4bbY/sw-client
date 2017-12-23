@@ -7,8 +7,8 @@ describe('client App', () => {
     page = new AppPage();
   });
 
-  it('should display welcome message', () => {
+  it('should display the correct footer text.', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getFooterText()).toEqual('I am a footer');
   });
 });

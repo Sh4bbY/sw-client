@@ -1,8 +1,10 @@
-# Client
+# software-wanted.client
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
 
-## Development server
+## Getting stared
+
+#### Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
@@ -25,3 +27,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Style guidelines
+
+This project is orientated on [sass-guidelin.es](https://sass-guidelin.es/) with it's [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern)

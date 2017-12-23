@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Projects:</h1>
+    <ul>
+        <li *ngFor="let project of projects; let i = index" class="project-list-item">
+            <a routerLink="/project/item/{{i}}">{{ project.title }}</a>
+            <span>Type: {{ project.type }}</span>
+            <span>Created At: {{ project.createdAt }}</span>
+            <span>Owner: {{ project.owner }}</span>
+            <i class="glyphicon glyphicon-star pull-right"></i>
+        </li>
+    </ul>
+</div>

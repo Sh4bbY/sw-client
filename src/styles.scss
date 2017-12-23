@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+// Utils
+@import './scss/utils/variables';
+
+// Vendor styles
+@import './scss/vendor/bootstrap';
+@import './scss/vendor/material';
+
+// Base styles
+@import './scss/base/base';
+@import './scss/base/elements';
+@import './scss/base/typography';
+
+// Layout styles
+@import './scss/layout/main';
+@import './scss/layout/helpers';

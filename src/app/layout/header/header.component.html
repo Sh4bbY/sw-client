@@ -1,0 +1,12 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <img src="/assets/img/logo.png" class="site-logo">
+        <nav class="main-nav">
+            <a routerLink="/dashboard">Dashboard</a>
+            <a routerLink="/projects">Projects</a>
+            <a routerLink="/register">Register</a>
+            <a *ngIf="!(userService.isAuthenticated() | async)" routerLink="/login">Login</a>
+            <a *ngIf="userService.isAuthenticated() | async" (click)="userService.logout()" href="">Logout</a>
+        </nav>
+    </mat-toolbar-row>
+</mat-toolbar>
