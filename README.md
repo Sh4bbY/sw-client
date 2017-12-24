@@ -1,5 +1,7 @@
 # software-wanted.client
 
+[![Build Status](https://travis-ci.org/Sh4bbY/sw-client.svg?branch=master)](https://travis-ci.org/Sh4bbY/sw-client)
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.5.
 
 ## Getting stared
