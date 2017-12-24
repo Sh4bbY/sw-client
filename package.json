@@ -45,6 +45,7 @@
     "@types/node": "^8.5.2",
     "bootstrap-sass": "^3.3.7",
     "codelyzer": "^4.0.1",
+    "cz-conventional-changelog": "^2.1.0",
     "jasmine-core": "^2.6.2",
     "jasmine-spec-reporter": "^4.1.0",
     "karma": "^1.7.0",
@@ -58,5 +59,10 @@
     "ts-node": "^3.2.0",
     "tslint": "^5.7.0",
     "typescript": "~2.4.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
