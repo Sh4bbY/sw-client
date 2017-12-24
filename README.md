@@ -6,30 +6,31 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Getting stared
 
-#### Development server
+This project is using yarn for dependency management. Install yarn by `npm i -g yarn`.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+npm tasks:
 
-## Code scaffolding
+```
+yarn start          // serves the application in dev-mode on localhost:4200
+yarn build          // creates a build of the application in dev-mode
+yarn build:prod     // creates a build of the application in dev-mode
+yarn test           // runs the testsuite in a single-run
+yarn test:watch     // runs the testsuite in watch mode
+yarn lint           // runs the linters for typescript and scss
+yarn lint:ts        // runs the linter for typescript
+yarn lint:scss      // runs the linter for scss
+yarn e2e            // runs end-to-end tests with protractor
+yarn ci:travis      // runs sequencially the lint, test and build:prod task
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Contributing
 
-## Build
+This repository supports [commitizen](https://github.com/commitizen/cz-cli) 
+and follows the [angular.js commit guidelines](https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#-git-commit-guidelines)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Enable commitizen by `npm install -g commitizen`. 
+Commit your changes by `git cz`
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Style guidelines
+#### Style guidelines
 
 This project is orientated on [sass-guidelin.es](https://sass-guidelin.es/) with it's [7-1 pattern](https://sass-guidelin.es/#the-7-1-pattern)
