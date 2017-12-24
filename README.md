@@ -16,6 +16,7 @@ yarn build          // creates a build of the application in dev-mode
 yarn build:prod     // creates a build of the application in dev-mode
 yarn test           // runs the testsuite in a single-run
 yarn test:watch     // runs the testsuite in watch mode
+yarn test:coverage  // runs the testsuite and creates a coverage-report in ./coverage
 yarn lint           // runs the linters for typescript and scss
 yarn lint:ts        // runs the linter for typescript
 yarn lint:scss      // runs the linter for scss

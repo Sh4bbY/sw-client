@@ -9,6 +9,7 @@
     "build:prod": "ng build --prod --env=prod",
     "test": "ng test --single-run",
     "test:watch": "ng test",
+    "test:coverage": "ng test --single-run --code-coverage",
     "lint": "npm run lint:ts && npm run lint:scss",
     "lint:ts": "ng lint",
     "lint:scss": "sass-lint -c ./scss-lint.yaml './styles.scss' -v -q",
