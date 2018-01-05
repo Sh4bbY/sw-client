@@ -1,12 +1,15 @@
 <mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <img src="/assets/img/logo.png" class="site-logo">
-        <nav class="main-nav">
-            <a routerLink="/dashboard">Dashboard</a>
-            <a routerLink="/projects">Projects</a>
-            <a routerLink="/register">Register</a>
-            <a *ngIf="!(userService.isAuthenticated() | async)" routerLink="/login">Login</a>
-            <a *ngIf="userService.isAuthenticated() | async" (click)="userService.logout()" href="">Logout</a>
-        </nav>
-    </mat-toolbar-row>
+  <mat-toolbar-row>
+    <img src="/assets/img/logo.png" class="site-logo">
+    <nav class="main-nav">
+      <a mat-button routerLink="/dashboard">Dashboard</a>
+      <a mat-button routerLink="/projects">Projects</a>
+    </nav>
+    <span class="grow"></span>
+    <nav *ngIf="!(userService.isAuthenticated() | async)">
+      <a mat-button routerLink="/register">Register</a>
+      <a mat-button routerLink="/login">Login</a>
+    </nav>
+    <sw-user-menu *ngIf="userService.isAuthenticated() | async"></sw-user-menu>
+  </mat-toolbar-row>
 </mat-toolbar>

@@ -40,13 +40,14 @@ export const reducer = (state: IUserState = initialState, { type, payload }: App
 
     case LOGIN_SUCCESS:
       const userLoginData = {
-        // id             : payload.id,
-        // name           : payload.name,
-        // email          : payload.email,
-        // createdAt      : payload.createdAt,
+        id             : payload.id,
+        name           : payload.username,
+        email          : payload.email,
+        createdAt      : payload.createdAt,
         isAuthenticated: true,
         isAuthPending  : false,
       };
+
       return Object.assign({}, state, userLoginData);
 
     case REGISTRATION_SUCCESS:

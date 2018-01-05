@@ -1,0 +1,10 @@
+<div>
+  <img src="/assets/img/profile.png" class="user-menu-img">
+  <span>{{ getName() | async }}</span>
+  <span class="user-menu-toggle" (click)="toggleUserMenu()">
+    <i class="fa fa-chevron-{{showUserMenu ? 'up' : 'down'}}"></i>
+  </span>
+  <nav *ngIf="showUserMenu" class="user-menu">
+    <a (click)="logout()" href="javascript:void(0)">Logout</a>
+  </nav>
+</div>

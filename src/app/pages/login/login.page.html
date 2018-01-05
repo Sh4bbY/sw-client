@@ -1,41 +1,42 @@
-<div class="container">
+<div class="page">
+  <div class="container">
     <div class="col-sm-12 col-md-8 col-lg-6 col-md-offset-2 col-lg-offset-3">
-        <div class="st-content-top clearfix">
-            <h1 class="st-title">Login</h1>
-        </div>
-        <mat-card>
-            <mat-card-content>
-                <div *ngIf="isLoading" class="loading-spinner">
-                    <div></div>
-                    <span>Loading</span>
-                </div>
-                <form #loginForm="ngForm" name="login-form" (ngSubmit)="login()" novalidate>
-                    <mat-form-field class="w-100">
-                        <input matInput name="username" placeholder="Username" [(ngModel)]="model.username"
-                               autocomplete="off" minlength="4" maxlength="24" required>
-                        <mat-hint align="end" *ngIf="formError.username">{{ formError.username }}</mat-hint>
-                    </mat-form-field>
+      <mat-card>
+        <mat-card-title><h3>Login</h3></mat-card-title>
+        <hr/>
+        <mat-card-content>
+          <div *ngIf="isLoading" class="loading-spinner">
+            <div></div>
+            <span>Loading</span>
+          </div>
+          <form #loginForm="ngForm" name="login-form" (ngSubmit)="login()" novalidate>
+            <mat-form-field class="w-100">
+              <input matInput name="email" placeholder="Email" [(ngModel)]="model.email"
+                     autocomplete="off" minlength="4" maxlength="24" required>
+              <mat-hint align="end" *ngIf="formError.email">{{ formError.email }}</mat-hint>
+            </mat-form-field>
 
-                    <mat-form-field class="w-100">
-                        <input matInput name="password" type="password" [(ngModel)]="model.password"
-                               placeholder="Password" autocomplete="off" minlength="5" required>
-                        <mat-hint align="end" *ngIf="formError.password">{{ formError.password }}</mat-hint>
-                    </mat-form-field>
-                    <mat-error *ngIf="responseError">{{ responseError }}</mat-error>
-                    <br/>
-                    <br/>
-                    <button mat-raised-button type="submit" color="primary" class="w-100" [disabled]="loading">
-                        Login
-                    </button>
-                    <br/>
-                    <br/>
-                    <p class="text-center"><a href="">Forgot password?</a></p>
-                    <p class="text-center">Do not have an account?</p>
-                    <button mat-raised-button type="button" color="accent" class="w-100" routerLink="/register">
-                        Register
-                    </button>
-                </form>
-            </mat-card-content>
-        </mat-card>
+            <mat-form-field class="w-100">
+              <input matInput name="password" type="password" [(ngModel)]="model.password"
+                     placeholder="Password" autocomplete="off" minlength="5" required>
+              <mat-hint align="end" *ngIf="formError.password">{{ formError.password }}</mat-hint>
+            </mat-form-field>
+            <mat-error *ngIf="responseError">{{ responseError }}</mat-error>
+            <br/>
+            <br/>
+            <button mat-raised-button type="submit" color="primary" class="w-100" [disabled]="loading">
+              Login
+            </button>
+            <br/>
+            <br/>
+            <p class="text-center"><a href="">Forgot password?</a></p>
+            <p class="text-center">Do not have an account?</p>
+            <button mat-raised-button type="button" color="accent" class="w-100" routerLink="/register">
+              Register
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
     </div>
+  </div>
 </div>

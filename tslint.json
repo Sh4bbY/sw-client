@@ -114,13 +114,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      ["app", "sw"],
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      ["app", "sw"],
       "kebab-case"
     ],
     "angular-whitespace": [true, "check-interpolation"],

@@ -6,7 +6,8 @@ import { UserService } from '../../services/user.service';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import * as root from '../../reducers';
-import {RouterTestingModule} from '@angular/router/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+import { UserMenuComponent } from '../../components/user-menu/user-menu.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -14,7 +15,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ],
+      declarations: [ HeaderComponent, UserMenuComponent ],
       imports     : [
         MatToolbarModule,
         HttpClientModule,

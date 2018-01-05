@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectItemPage } from './project-item.page';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ProjectItemPage', () => {
   let component: ProjectItemPage;
@@ -9,6 +10,7 @@ describe('ProjectItemPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ProjectItemPage ],
+      imports     : [ NoopAnimationsModule ],
     }).compileComponents();
   }));
 

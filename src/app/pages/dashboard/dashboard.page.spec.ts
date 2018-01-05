@@ -1,6 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardPage } from './dashboard.page';
+import { MatCardModule } from '@angular/material';
+import { FavoritesComponent } from '../../components/favorites/favorites.component';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('DashboardPage', () => {
   let component: DashboardPage;
@@ -8,7 +11,8 @@ describe('DashboardPage', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DashboardPage ],
+      declarations: [ DashboardPage, FavoritesComponent ],
+      imports     : [ MatCardModule, NoopAnimationsModule ],
     }).compileComponents();
   }));
 

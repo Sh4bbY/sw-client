@@ -1,3 +1,4 @@
+import { AuthGuard } from './guards/auth.guard';
 import { DashboardPage } from './pages/dashboard/dashboard.page';
 import { ProjectListPage } from './pages/project-list/project-list.page';
 import { LoginPage } from './pages/login/login.page';
@@ -10,5 +11,5 @@ export const routes = [
   { path: 'login', component: LoginPage },
   { path: 'register', component: RegisterPage },
   { path: 'projects', component: ProjectListPage },
-  { path: 'project/item/:id', component: ProjectItemPage },
+  { path: 'project/item/:id', component: ProjectItemPage, canActivate: [ AuthGuard ] },
 ];

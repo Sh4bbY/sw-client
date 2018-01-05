@@ -13,3 +13,16 @@
 .w-25 {
   width: 25%;
 }
+
+.grow {
+  display:   flex;
+  flex-grow: 1;
+}
+
+.page {
+  padding-top:     30px;
+  padding-bottom:  20px;
+  background:      linear-gradient(180deg, rgba(#277399, 0.2), #fff) repeat-x;
+  background-size: 1px 1080px;
+  flex-basis:      100%;
+}
