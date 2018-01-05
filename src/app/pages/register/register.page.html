@@ -1,47 +1,48 @@
-<div class="container">
+<div class="page">
+  <div class="container">
     <div class="col-sm-12 col-mat-8 col-lg-6 col-mat-offset-2 col-lg-offset-3">
-        <div class="st-content-top clearfix">
-            <h1 class="st-title">Registration</h1>
-        </div>
-        <mat-card>
-            <mat-card-content>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, dolor dolorem
-                    doloremque earum eos magnam, molestiae necessitatibus officiis quas soluta tempora tenetur vel!
-                    Deserunt labore magnam nulla recusandae voluptatum!
-                </p>
-                <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
-                    <mat-input-container class="w-100">
-                        <input matInput formControlName="username" placeholder="Username" autocomplete="off" required>
-                        <mat-hint align="end" *ngIf="formErrors.username">{{ formErrors.username }}</mat-hint>
-                    </mat-input-container>
-                    <mat-input-container class="w-100">
-                        <input matInput formControlName="email" placeholder="Email" autocomplete="off" required>
-                        <mat-hint align="end" *ngIf="formErrors.email">{{ formErrors.email }}</mat-hint>
-                    </mat-input-container>
-                    <mat-input-container class="w-100">
-                        <input #p matInput formControlName="password" type="password" placeholder="Password" required>
-                        <mat-hint align="end" *ngIf="formErrors.password">{{ formErrors.password }}</mat-hint>
-                    </mat-input-container>
-                    <mat-input-container class="w-100">
-                        <input #pc matInput formControlName="password_confirm" name="password_confirm"
-                               type="password" placeholder="Password confirmation" required>
-                        <mat-hint align="end" *ngIf="formErrors.password_confirm">
-                            {{ formErrors.password_confirm }}
-                        </mat-hint>
-                    </mat-input-container>
-                    <br/>
-                    {{ responseError }}
-                    <br/>
-                    <button mat-raised-button type="submit" color="primary" class="w-100">Register</button>
-                    <br/>
-                    <br/>
-                    <p class="text-center"> Already have an account? </p>
-                    <button mat-raised-button type="button" color="accent" routerLink="/login" class="w-100">
-                        Login
-                    </button>
-                </form>
-            </mat-card-content>
-        </mat-card>
+      <mat-card>
+        <mat-card-title><h3>Registration</h3></mat-card-title>
+        <mat-card-subtitle>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur, dolor dolorem
+          doloremque earum eos magnam, molestiae necessitatibus officiis quas soluta tempora tenetur vel!
+          Deserunt labore magnam nulla recusandae voluptatum!
+        </mat-card-subtitle>
+        <hr/>
+        <mat-card-content>
+          <form [formGroup]="registerForm" (ngSubmit)="submit()" novalidate>
+            <mat-input-container class="w-100">
+              <input matInput formControlName="username" placeholder="Username" autocomplete="off" required>
+              <mat-hint align="end" *ngIf="formErrors.username">{{ formErrors.username }}</mat-hint>
+            </mat-input-container>
+            <mat-input-container class="w-100">
+              <input matInput formControlName="email" placeholder="Email" autocomplete="off" required>
+              <mat-hint align="end" *ngIf="formErrors.email">{{ formErrors.email }}</mat-hint>
+            </mat-input-container>
+            <mat-input-container class="w-100">
+              <input #p matInput formControlName="password" type="password" placeholder="Password" required>
+              <mat-hint align="end" *ngIf="formErrors.password">{{ formErrors.password }}</mat-hint>
+            </mat-input-container>
+            <mat-input-container class="w-100">
+              <input #pc matInput formControlName="password_confirm" name="password_confirm"
+                     type="password" placeholder="Password confirmation" required>
+              <mat-hint align="end" *ngIf="formErrors.password_confirm">
+                {{ formErrors.password_confirm }}
+              </mat-hint>
+            </mat-input-container>
+            <br/>
+            {{ responseError }}
+            <br/>
+            <button mat-raised-button type="submit" color="primary" class="w-100">Register</button>
+            <br/>
+            <br/>
+            <p class="text-center"> Already have an account? </p>
+            <button mat-raised-button type="button" color="accent" routerLink="/login" class="w-100">
+              Login
+            </button>
+          </form>
+        </mat-card-content>
+      </mat-card>
     </div>
+  </div>
 </div>

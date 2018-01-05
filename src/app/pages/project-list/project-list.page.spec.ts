@@ -2,6 +2,8 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProjectListPage } from './project-list.page';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatCardModule, MatIconModule } from '@angular/material';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ProjectListPage', () => {
   let component: ProjectListPage;
@@ -10,7 +12,7 @@ describe('ProjectListPage', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ProjectListPage ],
-      imports     : [ RouterTestingModule ],
+      imports     : [ RouterTestingModule, MatCardModule, MatIconModule, NoopAnimationsModule ],
     }).compileComponents();
   }));
 

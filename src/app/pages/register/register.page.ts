@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/take';
 import * as log from 'loglevel';
+import { routeAnimation } from '../../animations/route.animation';
 
 @Component({
+  animations : [ routeAnimation ],
   templateUrl: './register.page.html',
   styleUrls  : [ './register.page.scss' ],
 })
 export class RegisterPage implements OnInit {
+  @HostBinding('@routeAnimation') routeAnimation: any;
 
   model: any;
   registerForm: FormGroup;
@@ -53,9 +56,8 @@ export class RegisterPage implements OnInit {
     this.userService.isAuthenticated().subscribe(isAuthenticated => {
       if (isAuthenticated) {
         this.router.navigateByUrl('/');
-      } else {
-        this.buildForm();
       }
+      this.buildForm();
     });
   }
 

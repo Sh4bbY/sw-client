@@ -24,8 +24,8 @@ describe('FooterComponent', () => {
   });
 
 
-  it('should should contain "I am a footer" in footer text', async(() => {
+  it('should should contain "I am the footer" in footer text', async(() => {
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.footer-nav').textContent).toContain('I am a footer');
+    expect(compiled.querySelector('.footer-nav').textContent).toContain('I am the footer');
   }));
 });

@@ -1,30 +1,32 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, HostBinding, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router';
 import * as log from 'loglevel';
 import { UserService } from '../../services/user.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { routeAnimation } from '../../animations/route.animation';
 
 @Component({
+  animations : [ routeAnimation ],
   templateUrl: './login.page.html',
   styleUrls  : [ './login.page.scss' ],
 })
 export class LoginPage implements OnInit, AfterViewInit {
+  @HostBinding('@routeAnimation') routeAnimation: any;
   @ViewChild('loginForm') loginForm: NgForm;
 
   isLoading: boolean;
-  model: { username: string, password: string };
+  model: { email: string, password: string };
   responseError: string;
 
   formError     = {
-    username: '',
+    email   : '',
     password: '',
   };
   validationMsg = {
-    username: {
-      required : 'Name is required.',
-      minlength: 'Name must be at least 4 characters long.',
-      maxlength: 'Name cannot be more than 24 characters long.',
+    email   : {
+      required : 'Email is required.',
+      maxlength: 'Name must be less than 60 characters long.',
+      pattern  : 'Email must be valid',
     },
     password: {
       required : 'Password is required.',
@@ -32,15 +34,15 @@ export class LoginPage implements OnInit, AfterViewInit {
     },
   };
 
-  constructor(private userService: UserService, private router: Router) {
+  constructor(private userService: UserService) {
   }
 
   ngOnInit() {
     this.isLoading     = false;
     this.responseError = null;
     this.model         = {
-      username: 'test',
-      password: 'test1',
+      email   : 'test@test.de',
+      password: 'test123',
     };
   }
 
@@ -51,11 +53,10 @@ export class LoginPage implements OnInit, AfterViewInit {
   login() {
     if (this.loginForm.valid) {
       this.isLoading = true;
-      this.userService.login(this.model.username, this.model.password)
+      this.userService.login(this.model.email, this.model.password)
         .subscribe((result: boolean) => {
           this.responseError = '';
           this.isLoading     = false;
-          this.router.navigateByUrl('/');
         }, (res: HttpErrorResponse) => {
           this.responseError = res.error;
           this.isLoading     = false;

@@ -1,1 +1,11 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+mat-card-title {
+  & > h1, & > h2, & > h3 {
+    margin-top: 0;
+  }
+}
+
+mat-card-subtitle {
+  line-height: 2.6rem;
+}

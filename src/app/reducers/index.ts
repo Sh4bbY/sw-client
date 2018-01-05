@@ -1,5 +1,4 @@
 import { environment } from '../../environments/environment';
-
 /**
  * storeLogger is a powerful metareducer that logs out each time we dispatch
  * an action.

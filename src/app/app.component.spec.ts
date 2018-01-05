@@ -1,4 +1,4 @@
-import { TestBed, async } from '@angular/core/testing';
+import { async, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
@@ -8,6 +8,7 @@ import { MatToolbarModule } from '@angular/material';
 import { UserService } from './services/user.service';
 import { StoreModule } from '@ngrx/store';
 import * as root from './reducers';
+import { UserMenuComponent } from './components/user-menu/user-menu.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -16,6 +17,7 @@ describe('AppComponent', () => {
         AppComponent,
         HeaderComponent,
         FooterComponent,
+        UserMenuComponent,
       ],
       imports     : [
         MatToolbarModule,
