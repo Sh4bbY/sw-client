@@ -10,8 +10,8 @@
     "test": "ng test --single-run",
     "test:watch": "ng test",
     "test:coverage": "ng test --single-run --code-coverage",
-    "lint": "npm run lint:ts && npm run lint:scss",
-    "lint:ts": "ng lint",
+    "lint": "npm run -s lint:ts && npm run -s lint:scss",
+    "lint:ts": "ng lint -t stylish",
     "lint:scss": "sass-lint -c ./scss-lint.yaml './styles.scss' -v -q",
     "e2e": "ng e2e",
     "ci:travis": "npm run lint && npm run test && npm run build"
